@@ -63,8 +63,23 @@ class tl_content_template extends Backend
 	 */
 	public function getTemplates(DataContainer $dc)
 	{
-		return $this->getTemplateGroup('tpl_', $dc->activeRecord->pid);
+		// Get the page ID
+		$objArticle = $this->Database->prepare("SELECT pid FROM tl_article WHERE id=?")
+									 ->limit(1)
+									 ->execute($dc->activeRecord->pid);
+
+		// Inherit the page settings
+		$objPage = $this->getPageDetails($objArticle->pid);
+
+		// Get the theme ID
+		$objLayout = $this->Database->prepare("SELECT pid FROM tl_layout WHERE id=?")
+									->limit(1)
+									->execute($objPage->layout);
+
+		// Return all gallery templates
+		return $this->getTemplateGroup('tpl_', $objLayout->pid);
 	}
+	
 }
 
 ?>
