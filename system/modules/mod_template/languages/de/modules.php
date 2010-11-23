@@ -37,6 +37,6 @@ $GLOBALS['TL_LANG']['MOD']['mod_template'] = 'Mod Template';
 /**
  * Front end modules
  */
-$GLOBALS['TL_LANG']['FMD']['template'] = array('Template', 'Fügt ein Template ein.');
+$GLOBALS['TL_LANG']['FMD']['mod_template'] = array('Template', 'Fügt ein Template ein.');
 
 ?>

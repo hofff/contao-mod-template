@@ -31,7 +31,7 @@
 /**
  * Miscellaneous
  */
-$GLOBALS['TL_LANG']['CTE']['template'] = array('Template', 'Fügt ein Template ein.');
+$GLOBALS['TL_LANG']['CTE']['mod_template'] = array('Template', 'Fügt ein Template ein.');
 
 
 /**

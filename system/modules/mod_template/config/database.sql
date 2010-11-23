@@ -12,7 +12,7 @@
 -- 
 
 CREATE TABLE `tl_module` (
-  `template` varchar(64) NOT NULL default ''
+  `mod_template` varchar(64) NOT NULL default ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -22,5 +22,5 @@ CREATE TABLE `tl_module` (
 -- 
 
 CREATE TABLE `tl_content` (
-  `template` varchar(64) NOT NULL default ''
+  `mod_template` varchar(64) NOT NULL default ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;

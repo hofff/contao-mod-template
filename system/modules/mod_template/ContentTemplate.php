@@ -47,13 +47,12 @@ class ContentTemplate extends ContentElement
 		{
 			$objTemplate = new BackendTemplate('be_wildcard');
 
-			$objTemplate->wildcard = '### TEMPLATE ###';
-			$objTemplate->title = isset($GLOBALS['FE_USER_TEMPLATE'][$this->template]) ? $GLOBALS['FE_USER_TEMPLATE'][$this->template] : $this->template;
+			$objTemplate->wildcard = '### TEMPLATE: ' . (isset($GLOBALS['FE_USER_TEMPLATE'][$this->mod_template]) ? $GLOBALS['FE_USER_TEMPLATE'][$this->mod_template] : $this->mod_template) . ' ###';
 			
 			return $objTemplate->parse();
 		}
 		
-		$this->strTemplate = $this->template;
+		$this->strTemplate = $this->mod_template;
 		return parent::generate();
 	}
 	

@@ -31,12 +31,12 @@
 /**
  * Front end modules
  */
-$GLOBALS['FE_MOD']['miscellaneous']['template'] = 'ModuleTemplate';
+$GLOBALS['FE_MOD']['miscellaneous']['mod_template'] = 'ModuleTemplate';
 
 
 /**
  * Content elements
  */
-$GLOBALS['TL_CTE']['includes']['template']      = 'ContentTemplate';
+$GLOBALS['TL_CTE']['includes']['mod_template']      = 'ContentTemplate';
 
 ?>

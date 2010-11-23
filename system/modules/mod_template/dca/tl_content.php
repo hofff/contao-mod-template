@@ -31,19 +31,20 @@
 /**
  * Add palettes to tl_content
  */
-$GLOBALS['TL_DCA']['tl_content']['palettes']['template']     = '{type_legend},type;{config_legend},template;{protected_legend:hide},protected;{expert_legend:hide},guests';
-
+$GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][]  = 'mod_template';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['mod_template']    = '{type_legend},type;{config_legend},mod_template;{protected_legend:hide},protected;{expert_legend:hide},guests';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['tpl_hello_world'] = '{type_legend},type;{config_legend},mod_template,html;{protected_legend:hide},protected;{expert_legend:hide},guests';
 
 /**
  * Add fields to tl_module
  */
-$GLOBALS['TL_DCA']['tl_content']['fields']['template'] = array(
-	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['template'],
+$GLOBALS['TL_DCA']['tl_content']['fields']['mod_template'] = array(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['mod_template'],
 	'default'                 => '',
 	'inputType'               => 'select',
 	'options_callback'        => array('tl_content_template', 'getTemplates'),
 	'reference'               => &$GLOBALS['FE_USER_TEMPLATE'],
-	'eval'                    => array('tl_class'=>'clr w50')
+	'eval'                    => array('tl_class'=>'clr', 'submitOnChange'=>true)
 );
 
 /**

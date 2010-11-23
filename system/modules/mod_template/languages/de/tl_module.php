@@ -31,6 +31,6 @@
 /**
  * Fields
  */
-$GLOBALS['TL_LANG']['tl_module']['template'] = array('Template', 'Das einzufügende Template.');
+$GLOBALS['TL_LANG']['tl_module']['mod_template'] = array('Template', 'Das einzufügende Template.');
 
 ?>
