@@ -55,8 +55,8 @@ class ModuleTemplate extends Module
 			return $objTemplate->parse();
 		}
 		
-		$tpl = new FrontendTemplate($this->template);
-		return $tpl->parse();
+		$this->strTemplate = $this->template;
+		return parent::generate();
 	}
 	
 	public function compile() {
