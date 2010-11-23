@@ -43,6 +43,16 @@ class ContentTemplate extends ContentElement
 	 */
 	public function generate()
 	{
+		if (TL_MODE == 'BE')
+		{
+			$objTemplate = new BackendTemplate('be_wildcard');
+
+			$objTemplate->wildcard = '### TEMPLATE ###';
+			$objTemplate->title = $this->template;
+
+			return $objTemplate->parse();
+		}
+		
 		$tpl = new FrontendTemplate($this->template);
 		return $tpl->parse();
 	}

@@ -43,6 +43,18 @@ class ModuleTemplate extends Module
 	 */
 	public function generate()
 	{
+		if (TL_MODE == 'BE')
+		{
+			$objTemplate = new BackendTemplate('be_wildcard');
+
+			$objTemplate->wildcard = '### TEMPLATE ###';
+			$objTemplate->id = $this->id;
+			$objTemplate->link = $this->template;
+			$objTemplate->href = 'contao/main.php?do=themes&amp;table=tl_module&amp;act=edit&amp;id=' . $this->id;
+
+			return $objTemplate->parse();
+		}
+		
 		$tpl = new FrontendTemplate($this->template);
 		return $tpl->parse();
 	}
