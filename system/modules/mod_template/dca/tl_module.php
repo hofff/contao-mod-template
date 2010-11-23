@@ -68,7 +68,7 @@ class tl_module_template extends Backend
 	}
 	
 	/**
-	 * Return all news templates as array
+	 * Return all templates as array
 	 * @param object
 	 * @return array
 	 */

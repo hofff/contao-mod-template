@@ -57,9 +57,8 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mod_template'] = array(
  */
 class tl_content_template extends Backend
 {
-
 	/**
-	 * Return all news templates as array
+	 * Return all templates as array
 	 * @param object
 	 * @return array
 	 */
@@ -78,10 +77,9 @@ class tl_content_template extends Backend
 									->limit(1)
 									->execute($objPage->layout);
 
-		// Return all gallery templates
+		// Return all templates
 		return $this->getTemplateGroup('tpl_', $objLayout->pid);
 	}
-	
 }
 
 ?>
