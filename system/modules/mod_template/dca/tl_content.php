@@ -42,6 +42,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['template'] = array(
 	'default'                 => '',
 	'inputType'               => 'select',
 	'options_callback'        => array('tl_content_template', 'getTemplates'),
+	'reference'               => &$GLOBALS['FE_USER_TEMPLATE'],
 	'eval'                    => array('tl_class'=>'clr w50')
 );
 
@@ -62,7 +63,7 @@ class tl_content_template extends Backend
 	 * @return array
 	 */
 	public function getTemplates(DataContainer $dc)
-	{
+	{	
 		// Get the page ID
 		$objArticle = $this->Database->prepare("SELECT pid FROM tl_article WHERE id=?")
 									 ->limit(1)

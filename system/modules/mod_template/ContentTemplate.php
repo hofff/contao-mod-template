@@ -48,8 +48,8 @@ class ContentTemplate extends ContentElement
 			$objTemplate = new BackendTemplate('be_wildcard');
 
 			$objTemplate->wildcard = '### TEMPLATE ###';
-			$objTemplate->title = $this->template;
-
+			$objTemplate->title = isset($GLOBALS['FE_USER_TEMPLATE'][$this->template]) ? $GLOBALS['FE_USER_TEMPLATE'][$this->template] : $this->template;
+			
 			return $objTemplate->parse();
 		}
 		

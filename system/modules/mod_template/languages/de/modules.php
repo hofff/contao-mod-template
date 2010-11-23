@@ -31,7 +31,8 @@
 /**
  * Back end modules
  */
-$GLOBALS['TL_LANG']['MOD']['mod_template'] = 'Template';
+$GLOBALS['TL_LANG']['MOD']['mod_template'] = 'Mod Template';
+
 
 /**
  * Front end modules

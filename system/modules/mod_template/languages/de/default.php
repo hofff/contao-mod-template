@@ -33,4 +33,13 @@
  */
 $GLOBALS['TL_LANG']['CTE']['template'] = array('Template', 'Fügt ein Template ein.');
 
+
+/**
+ * Templates
+ */
+$GLOBALS['FE_USER_TEMPLATE'] = array
+(
+	'tpl_hello_world' => 'Hallo Welt (Beispieltemplate)'
+);
+
 ?>

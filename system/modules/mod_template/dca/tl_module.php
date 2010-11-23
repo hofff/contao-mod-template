@@ -42,6 +42,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['template'] = array(
 	'default'                 => '',
 	'inputType'               => 'select',
 	'options_callback'        => array('tl_module_template', 'getTemplates'),
+	'reference'               => &$GLOBALS['FE_USER_TEMPLATE'],
 	'eval'                    => array('tl_class'=>'clr w50')
 );
 

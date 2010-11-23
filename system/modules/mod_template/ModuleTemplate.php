@@ -48,9 +48,7 @@ class ModuleTemplate extends Module
 			$objTemplate = new BackendTemplate('be_wildcard');
 
 			$objTemplate->wildcard = '### TEMPLATE ###';
-			$objTemplate->id = $this->id;
-			$objTemplate->link = $this->template;
-			$objTemplate->href = 'contao/main.php?do=themes&amp;table=tl_module&amp;act=edit&amp;id=' . $this->id;
+			$objTemplate->title = isset($GLOBALS['FE_USER_TEMPLATE'][$this->template]) ? $GLOBALS['FE_USER_TEMPLATE'][$this->template] : $this->template;
 
 			return $objTemplate->parse();
 		}
