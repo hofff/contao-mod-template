@@ -59,6 +59,14 @@ class ContentTemplate extends ContentElement
 	public function compile() {
 	}
 	
+	
+	/**
+	 * Generate ajax request
+	 * @return string
+	 */
+	public function generateAjax() {
+		return $this->generate();
+	}
 }
 
 ?>
