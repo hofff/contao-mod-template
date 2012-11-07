@@ -33,13 +33,13 @@
  */
 $GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][]  = 'mod_template';
 $GLOBALS['TL_DCA']['tl_module']['metapalettes']['mod_template'] = array(
-	'title_legend'		=> array('name', 'type'),
-	'config_legend'		=> array('mod_template'),
-	'protected_legend'	=> array(':hide', 'protected'),
-	'expert_legend'		=> array(':hide', 'guests'),
+	'title'		=> array('name', 'type'),
+	'config'	=> array('mod_template'),
+	'protected'	=> array(':hide', 'protected'),
+	'expert'	=> array(':hide', 'guests'),
 );
 $GLOBALS['TL_DCA']['tl_module']['metapalettes']['tpl_hello_world extends mod_template'] = array(
-	'+config_legend'	=> array('html'),
+	'+config'	=> array('html'),
 );
 
 /**
