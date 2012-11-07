@@ -32,8 +32,15 @@
  * Add palettes to tl_content
  */
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][]  = 'mod_template';
-$GLOBALS['TL_DCA']['tl_content']['palettes']['mod_template']    = '{type_legend},type;{config_legend},mod_template;{protected_legend:hide},protected;{expert_legend:hide},guests';
-$GLOBALS['TL_DCA']['tl_content']['palettes']['tpl_hello_world'] = '{type_legend},type;{config_legend},mod_template,html;{protected_legend:hide},protected;{expert_legend:hide},guests';
+$GLOBALS['TL_DCA']['tl_content']['metapalettes']['mod_template'] = array(
+	'type'		=> array('type'),
+	'config'	=> array('mod_template'),
+	'protected'	=> array(':hide', 'protected'),
+	'expert'	=> array(':hide', 'guests'),
+);
+$GLOBALS['TL_DCA']['tl_content']['metapalettes']['tpl_hello_world extends mod_template'] = array(
+	'+config'	=> array('html'),
+);
 
 /**
  * Add fields to tl_module
