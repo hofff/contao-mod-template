@@ -1,0 +1,41 @@
+{
+	"name":"bit3/contao-mod-template",
+	"description":"MetaPalettes extension for Contao OpenSource CMS",
+	"keywords":["contao", "template"],
+	"type":"contao-module",
+	"homepage":"http://bit3.de",
+	"license":"LGPL-3.0+",
+	"authors":[
+		{
+			"name":"Tristan Lins",
+			"email":"tristan.lins@bit3.de",
+			"homepage":"http://bit3.de",
+			"role":"Developer"
+		}
+	],
+	"support":{
+		"email":"info@bit3.de",
+		"issues":"https://github.com/bit3/contao-mod-template/issues",
+		"wiki":"https://github.com/bit3/contao-mod-template/wiki",
+		"irc":"irc://irc.freenode.org/contao.dev",
+		"source":"https://github.com/bit3/contao-mod-template"
+	},
+	"require":{
+		"php":">=5.3",
+		"contao/core":">=2.11,<4"
+	},
+	"require-dev":{
+		"squizlabs/php_codesniffer":"1.*",
+		"bit3/php-coding-standard":"@dev"
+	},
+	"autoload":{
+		"classmap": ["src/"]
+	},
+	"extra":{
+		"contao": {
+			"symlinks":{
+				"contao":"system/modules/mod-template"
+			}
+		}
+	}
+}
