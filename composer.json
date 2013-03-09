@@ -2,6 +2,7 @@
 	"name":"bit3/contao-mod-template",
 	"description":"MetaPalettes extension for Contao OpenSource CMS",
 	"keywords":["contao", "template"],
+	"version":"1.2.0",
 	"type":"contao-module",
 	"homepage":"http://bit3.de",
 	"license":"LGPL-3.0+",
