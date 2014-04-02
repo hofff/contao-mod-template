@@ -37,9 +37,6 @@ $GLOBALS['TL_LANG']['CTE']['mod_template'] = array('Template', 'Include a templa
 /**
  * Templates
  */
-$GLOBALS['FE_USER_TEMPLATE'] = array
-(
-	'tpl_hello_world' => 'Hello world (example template)'
-);
+$GLOBALS['FE_USER_TEMPLATE']['tpl_hello_world'] = 'Hello world (example template)';
 
 ?>
