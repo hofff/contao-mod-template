@@ -1,4 +1,4 @@
-<?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
+<?php
 
 /**
  * Contao Open Source CMS
@@ -53,40 +53,3 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mod_template'] = array(
 	'reference'               => &$GLOBALS['FE_USER_TEMPLATE'],
 	'eval'                    => array('tl_class'=>'clr', 'submitOnChange'=>true)
 );
-
-/**
- * Class tl_content_template
- * 
- * Helper class for tl_content table.
- * @copyright  InfinitySoft 2010
- * @author     Tristan Lins <tristan.lins@infinitysoft.de>
- * @package    ModTemplate
- */
-class tl_content_template extends Backend
-{
-	/**
-	 * Return all templates as array
-	 * @param object
-	 * @return array
-	 */
-	public function getTemplates(DataContainer $dc)
-	{	
-		// Get the page ID
-		$objArticle = $this->Database->prepare("SELECT pid FROM tl_article WHERE id=?")
-									 ->limit(1)
-									 ->execute($dc->activeRecord->pid);
-
-		// Inherit the page settings
-		$objPage = $this->getPageDetails($objArticle->pid);
-
-		// Get the theme ID
-		$objLayout = $this->Database->prepare("SELECT pid FROM tl_layout WHERE id=?")
-									->limit(1)
-									->execute($objPage->layout);
-
-		// Return all templates
-		return $this->getTemplateGroup('tpl_', $objLayout->pid);
-	}
-}
-
-?>
