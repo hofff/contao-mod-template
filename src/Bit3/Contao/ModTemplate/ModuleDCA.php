@@ -27,29 +27,36 @@
  * @license    http://opensource.org/licenses/lgpl-3.0.html
  */
 
+namespace Bit3\Contao\ModTemplate;
 
 /**
- * Add palettes to tl_module
+ * Class ContentDCA
+ *
+ * Helper class for tl_content table.
+ * @copyright  InfinitySoft 2010
+ * @author     Tristan Lins <tristan.lins@infinitysoft.de>
+ * @package    ModTemplate
  */
-$GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][]  = 'mod_template';
-$GLOBALS['TL_DCA']['tl_module']['metapalettes']['mod_template'] = array(
-	'title'		=> array('name', 'type'),
-	'config'	=> array('mod_template'),
-	'protected'	=> array(':hide', 'protected'),
-	'expert'	=> array(':hide', 'guests'),
-);
-$GLOBALS['TL_DCA']['tl_module']['metapalettes']['tpl_hello_world extends mod_template'] = array(
-	'+config'	=> array('html'),
-);
+class ModuleDCA extends \Backend
+{
 
-/**
- * Add fields to tl_module
- */
-$GLOBALS['TL_DCA']['tl_module']['fields']['mod_template'] = array(
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['mod_template'],
-	'default'                 => '',
-	'inputType'               => 'select',
-	'options_callback'        => array('tl_module_template', 'getTemplates'),
-	'reference'               => &$GLOBALS['FE_USER_TEMPLATE'],
-	'eval'                    => array('tl_class'=>'clr', 'submitOnChange'=>true)
-);
+	/**
+	 * Import the back end user object
+	 */
+	public function __construct()
+	{
+		parent::__construct();
+		$this->import('BackendUser', 'User');
+	}
+
+	/**
+	 * Return all templates as array
+	 * @param object
+	 * @return array
+	 */
+	public function getTemplates($dc)
+	{
+		return $this->getTemplateGroup('tpl_', $dc->activeRecord->pid);
+	}
+
+}

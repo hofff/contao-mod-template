@@ -1,4 +1,4 @@
-<?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
+<?php
 
 /**
  * Contao Open Source CMS
@@ -27,17 +27,18 @@
  * @license    http://opensource.org/licenses/lgpl-3.0.html
  */
 
+namespace Bit3\Contao\ModTemplate;
 
 /**
- * Class ModuleTemplate 
+ * Class ContentTemplate
  *
  * @copyright  InfinitySoft 2010
  * @author     Tristan Lins <tristan.lins@infinitysoft.de>
  * @package    ModTemplate
  */
-class ModuleTemplate extends Module
+class ContentTemplate extends \ContentElement
 {
-	
+
 	/**
 	 * @return string
 	 */
@@ -45,21 +46,21 @@ class ModuleTemplate extends Module
 	{
 		if (TL_MODE == 'BE')
 		{
-			$objTemplate = new BackendTemplate('be_wildcard');
+			$objTemplate = new \BackendTemplate('be_wildcard');
 
 			$objTemplate->wildcard = '### TEMPLATE: ' . (isset($GLOBALS['FE_USER_TEMPLATE'][$this->mod_template]) ? $GLOBALS['FE_USER_TEMPLATE'][$this->mod_template] : $this->mod_template) . ' ###';
 
 			return $objTemplate->parse();
 		}
-		
+
 		$this->strTemplate = $this->mod_template;
 		return parent::generate();
 	}
-	
+
 	public function compile() {
 	}
-	
-	
+
+
 	/**
 	 * Generate ajax request
 	 * @return string
@@ -67,6 +68,5 @@ class ModuleTemplate extends Module
 	public function generateAjax() {
 		return $this->generate();
 	}
-}
 
-?>
+}
