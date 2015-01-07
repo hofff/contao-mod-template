@@ -49,7 +49,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mod_template'] = array(
 	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['mod_template'],
 	'default'                 => '',
 	'inputType'               => 'select',
-	'options_callback'        => array('tl_content_template', 'getTemplates'),
+	'options_callback'        => array('Bit3\Contao\ModTemplate\ContentDCA', 'getTemplates'),
 	'reference'               => &$GLOBALS['FE_USER_TEMPLATE'],
 	'eval'                    => array('tl_class'=>'clr', 'submitOnChange'=>true)
 );
