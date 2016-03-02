@@ -1,26 +1,38 @@
 {
-	"name" : "bit3/contao-mod-template",
+	"name" : "hofff/contao-mod-template",
 	"description" : "MetaPalettes extension for Contao OpenSource CMS",
 	"keywords" : [
 		"contao",
 		"template"
 	],
 	"type" : "contao-module",
-	"homepage" : "http://bit3.de",
+	"homepage" : "https://hofff.com",
 	"license" : "LGPL-3.0+",
 	"authors" : [{
 			"name" : "Tristan Lins",
 			"email" : "tristan.lins@bit3.de",
 			"homepage" : "http://bit3.de",
 			"role" : "Developer"
-		}
+		},
+		{
+			"name" : "Oliver Hoff",
+			"email" : "oliver@hofff.com",
+			"homepage" : "https://hofff.com/",
+			"role" : "Developer"
+		},
+	        {
+	            "name": "Nicky Hoff",
+	            "homepage": "https://hofff.com",
+	            "email": "nick@hofff.com",
+	            "role": "Manager"
+	        }
 	],
 	"support" : {
-		"email" : "info@bit3.de",
-		"issues" : "https://github.com/bit3/contao-mod-template/issues",
-		"wiki" : "https://github.com/bit3/contao-mod-template/wiki",
+		"email" : "info@hofff.com",
+		"issues" : "https://github.com/hofff/contao-mod-template/issues",
+		"wiki" : "https://github.com/hofff/contao-mod-template/wiki",
 		"irc" : "irc://irc.freenode.org/contao.dev",
-		"source" : "https://github.com/bit3/contao-mod-template"
+		"source" : "https://github.com/hofff/contao-mod-template"
 	},
 	"require" : {
 		"php" : ">=5.3",
