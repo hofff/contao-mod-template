@@ -45,7 +45,8 @@
 		"bit3/php-coding-standard" : "@dev"
 	},
 	"replace" : {
-		"contao-legacy/modtemplate" : "self.version"
+		"contao-legacy/modtemplate" : "self.version",
+		"bit3/contao-mod-template" : "self.version"
 	},
 	"autoload" : {
 		"psr-0" : {
