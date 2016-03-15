@@ -1,31 +1,29 @@
 {
 	"name" : "hofff/contao-mod-template",
-	"description" : "MetaPalettes extension for Contao OpenSource CMS",
+	"description" : "Wrap a template as content element or module in Contao OpenSource CMS",
 	"keywords" : [
 		"contao",
 		"template"
 	],
 	"type" : "contao-module",
-	"homepage" : "https://hofff.com",
+	"homepage" : "https://hofff.com/",
 	"license" : "LGPL-3.0+",
 	"authors" : [{
 			"name" : "Tristan Lins",
 			"email" : "tristan.lins@bit3.de",
 			"homepage" : "http://bit3.de",
-			"role" : "Developer"
-		},
-		{
+			"role" : "Creator"
+		}, {
 			"name" : "Oliver Hoff",
 			"email" : "oliver@hofff.com",
 			"homepage" : "https://hofff.com/",
 			"role" : "Developer"
-		},
-	        {
-	            "name": "Nicky Hoff",
-	            "homepage": "https://hofff.com",
-	            "email": "nick@hofff.com",
-	            "role": "Manager"
-	        }
+		}, {
+			"name" : "Nicky Hoff",
+			"homepage" : "https://hofff.com",
+			"email" : "nick@hofff.com",
+			"role" : "Manager"
+		}
 	],
 	"support" : {
 		"email" : "info@hofff.com",
@@ -35,14 +33,10 @@
 		"source" : "https://github.com/hofff/contao-mod-template"
 	},
 	"require" : {
-		"php" : ">=5.3",
-		"contao/core" : ">=2.11,<4",
-		"contao-community-alliance/composer-installer" : "*",
-		"bit3/contao-meta-palettes" : "~1.3"
-	},
-	"require-dev" : {
-		"squizlabs/php_codesniffer" : "1.*",
-		"bit3/php-coding-standard" : "@dev"
+		"php" : "^5.4 || ^7.0",
+		"contao/core" : "^3.2",
+		"contao-community-alliance/composer-installer" : "^2.0",
+		"contao-community-alliance/meta-palettes" : "^1.3"
 	},
 	"replace" : {
 		"contao-legacy/modtemplate" : "self.version",
@@ -50,17 +44,14 @@
 	},
 	"autoload" : {
 		"psr-0" : {
-			"Bit3" : "src/"
+			"Hofff" : "src/"
 		}
 	},
 	"extra" : {
 		"contao" : {
 			"sources" : {
-				"contao" : "system/modules/mod-template"
+				"contao-module" : "system/modules/hofff-mod-template"
 			}
-		},
-		"branch-alias" : {
-			"dev-master" : "1.x-dev"
 		}
 	}
 }

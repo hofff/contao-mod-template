@@ -1,3 +1,7 @@
-# [ModTemplate] Custom Templates content element and module
+# Custom template content elements and modules
 
-Add a content element and module that can be used to add a custom template, prefixed with **tpl_*** to you layout.
+This extension provides a content element and a module for
+Contao OpenSource CMS that can be used to render a custom template.
+
+The templates should be prefixed with `tpl_` to be available from within the
+content element or module.

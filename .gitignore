@@ -1,4 +1,9 @@
-.project
-.settings
-.buildpath
-.idea
+/*
+!/.gitignore
+!/composer.json
+!/README.md
+!/contao-module/
+!/dev/
+!/publish/
+!/test/
+!/src/
